@@ -5,10 +5,11 @@ const Index = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="min-h-screen flex items-center justify-center bg-background">
       <div className="text-center space-y-8">
-        <h1 className="text-5xl font-bold">Work Management System</h1>
-        <p className="text-xl text-gray-600 max-w-md mx-auto">
+        <h1 className="text-6xl font-bold text-white">The Quarry</h1>
+        <h2 className="text-4xl font-semibold text-accent-gray">Work Management System</h2>
+        <p className="text-xl text-gray-400 max-w-md mx-auto">
           Efficiently manage work orders and track daily tasks across different zones
         </p>
         <div className="space-x-4">
