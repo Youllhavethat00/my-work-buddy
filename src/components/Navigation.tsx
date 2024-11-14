@@ -29,6 +29,14 @@ const Navigation = () => {
           >
             Jobs
           </Link>
+          <Link
+            to="/zones"
+            className={`hover:text-accent-gray transition-colors ${
+              isActive("/zones") ? "text-accent-gray" : ""
+            }`}
+          >
+            Zones
+          </Link>
         </div>
       </div>
     </nav>
