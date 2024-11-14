@@ -27,7 +27,7 @@ const Navigation = () => {
               isActive("/daily-tasks") ? "text-accent-green" : ""
             }`}
           >
-            Daily Tasks
+            Jobs
           </Link>
         </div>
       </div>

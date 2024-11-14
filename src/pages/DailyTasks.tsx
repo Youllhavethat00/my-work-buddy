@@ -19,22 +19,22 @@ const mockTasks = [
 const DailyTasks = () => {
   return (
     <div className="container mx-auto py-8 space-y-8">
-      <h1 className="text-3xl font-bold mb-8 text-white">Daily Tasks</h1>
+      <h1 className="text-3xl font-bold mb-8 text-white">Jobs</h1>
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="bg-card rounded-lg p-6">
-          <h2 className="text-xl font-semibold mb-4 text-white">Add New Tasks</h2>
+          <h2 className="text-xl font-semibold mb-4 text-white">Add New Jobs</h2>
           <TaskForm />
         </div>
         
         <div className="bg-card rounded-lg p-6">
-          <h2 className="text-xl font-semibold mb-4 text-white">Task History</h2>
+          <h2 className="text-xl font-semibold mb-4 text-white">Job History</h2>
           <ScrollArea className="h-[400px] rounded-md border">
             <Table>
               <TableHeader>
                 <TableRow>
                   <TableHead className="text-white">Date</TableHead>
-                  <TableHead className="text-white">Tasks Completed</TableHead>
+                  <TableHead className="text-white">Jobs Completed</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
