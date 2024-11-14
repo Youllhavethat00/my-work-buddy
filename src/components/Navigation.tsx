@@ -9,10 +9,10 @@ const Navigation = () => {
     <nav className="bg-primary text-white p-4 shadow-lg">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center space-x-2">
-          <div className="text-2xl font-bold">The Quarry</div>
-          <div className="text-sm text-accent-gray">Work Manager</div>
+          <div className="text-xl md:text-2xl font-bold">The Quarry</div>
+          <div className="text-xs md:text-sm text-accent-gray">Work Manager</div>
         </div>
-        <div className="space-x-6">
+        <div className="space-x-4 text-sm md:text-base">
           <Link
             to="/work-orders"
             className={`hover:text-accent-blue transition-colors ${

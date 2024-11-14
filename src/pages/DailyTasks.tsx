@@ -19,29 +19,29 @@ const mockTasks = [
 const DailyTasks = () => {
   return (
     <div className="container mx-auto py-8 space-y-8">
-      <h1 className="text-3xl font-bold mb-8 text-white">Jobs</h1>
+      <h1 className="text-2xl md:text-3xl font-bold mb-8 text-white">Jobs</h1>
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div className="bg-card rounded-lg p-6">
-          <h2 className="text-xl font-semibold mb-4 text-white">Add New Jobs</h2>
+        <div className="bg-card rounded-lg p-4 md:p-6">
+          <h2 className="text-lg md:text-xl font-semibold mb-4 text-white">Add New Jobs</h2>
           <TaskForm />
         </div>
         
-        <div className="bg-card rounded-lg p-6">
-          <h2 className="text-xl font-semibold mb-4 text-white">Job History</h2>
+        <div className="bg-card rounded-lg p-4 md:p-6">
+          <h2 className="text-lg md:text-xl font-semibold mb-4 text-white">Job History</h2>
           <ScrollArea className="h-[400px] rounded-md border">
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead className="text-white">Date</TableHead>
-                  <TableHead className="text-white">Jobs Completed</TableHead>
+                  <TableHead className="text-white text-sm md:text-base">Date</TableHead>
+                  <TableHead className="text-white text-sm md:text-base">Jobs Completed</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {mockTasks.map((task) => (
                   <TableRow key={task.id}>
-                    <TableCell className="text-white">{task.date}</TableCell>
-                    <TableCell className="text-white">{task.tasks}</TableCell>
+                    <TableCell className="text-white text-sm md:text-base">{task.date}</TableCell>
+                    <TableCell className="text-white text-sm md:text-base">{task.tasks}</TableCell>
                   </TableRow>
                 ))}
               </TableBody>
