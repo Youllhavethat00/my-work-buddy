@@ -10,7 +10,7 @@ const Navigation = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center space-x-2">
           <div className="text-xl md:text-2xl font-bold">The Quarry</div>
-          <div className="text-xs md:text-sm text-accent-gray">Work Manager</div>
+          <div className="hidden md:block text-xs md:text-sm text-accent-gray">Work Manager</div>
         </div>
         <div className="space-x-4 text-sm md:text-base">
           <Link
