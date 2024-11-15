@@ -11,22 +11,46 @@ interface Zone {
 const mockZones: Zone[] = [
   {
     id: 1,
-    name: "Zone A",
-    description: "Main extraction area with heavy machinery access",
+    name: "Zone 1",
+    description: "Main entrance, Bridal Suite, Warehouse",
     imageUrl: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb",
   },
   {
     id: 2,
-    name: "Zone B",
-    description: "Processing and sorting facility",
+    name: "Zone 2",
+    description: "Yard 1 The big island ",
     imageUrl: "https://images.unsplash.com/photo-1473177104440-ffee2f376098",
   },
   {
     id: 3,
-    name: "Zone C",
-    description: "Storage and distribution center",
+    name: "Zone 3",
+    description: "Small island, the Terrazzo, and the grass stip in front of the rock",
     imageUrl: "https://images.unsplash.com/photo-1486718448742-163732cd1544",
   },
+  {
+    id: 4,
+    name: "Zone 4",
+    description: "The Canyon entrace (both sides), and Canyon"
+    imageUrl: "https://share.icloud.com/photos/059ubj0qxBEtND5ytmSlmnQvw",
+  }
+  {
+    id: 5,
+    name: "Zone 5",
+    description: "The Carrara",
+    imageUrl: "https://share.icloud.com/photos/0f2a6p-4v*HtQERPoxyTfVuLQ",
+  }
+  {
+    id: 6,
+    name: "Zone 6",
+    description: "Parking Lot",
+    imageUrl: "",
+  }
+  {id: 7,
+    name: "Zone 7",
+    description: "Office",
+    imageUrl: "",
+  
+  }
 ];
 
 const Zones = () => {
