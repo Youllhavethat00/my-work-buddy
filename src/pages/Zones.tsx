@@ -30,26 +30,26 @@ const mockZones: Zone[] = [
   {
     id: 4,
     name: "Zone 4",
-    description: "The Canyon entrace (both sides), and Canyon"
+    description: "The Canyon entrace (both sides), and Canyon",
     imageUrl: "https://share.icloud.com/photos/059ubj0qxBEtND5ytmSlmnQvw",
-  }
+  },
   {
     id: 5,
     name: "Zone 5",
     description: "The Carrara",
     imageUrl: "https://share.icloud.com/photos/0f2a6p-4v*HtQERPoxyTfVuLQ",
-  }
+  },
   {
     id: 6,
     name: "Zone 6",
     description: "Parking Lot",
     imageUrl: "",
-  }
-  {id: 7,
+  },
+  {
+    id: 7,
     name: "Zone 7",
     description: "Office",
     imageUrl: "",
-  
   }
 ];
 
