@@ -1,5 +1,7 @@
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 interface Zone {
   id: number;
@@ -54,9 +56,20 @@ const mockZones: Zone[] = [
 ];
 
 const Zones = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="container mx-auto py-8 space-y-8">
-      <h1 className="text-2xl md:text-3xl font-bold mb-8 text-white">Zone Mapping</h1>
+      <div className="flex justify-between items-center mb-8">
+        <h1 className="text-2xl md:text-3xl font-bold text-white">Zone Mapping</h1>
+        <Button 
+          onClick={() => navigate("/")}
+          variant="outline"
+          className="text-white border-white hover:bg-white/10"
+        >
+          Back to Home
+        </Button>
+      </div>
       
       <ScrollArea className="h-[calc(100vh-200px)]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-6">
