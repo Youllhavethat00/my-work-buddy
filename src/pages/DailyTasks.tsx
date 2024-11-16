@@ -10,6 +10,7 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useState } from "react";
 
 // Mock data for task history
 const mockTasks = [
@@ -27,6 +28,8 @@ const emptyRows = Array.from({ length: 10 }, (_, index) => ({
 }));
 
 const DailyTasks = () => {
+  const [focusedRow, setFocusedRow] = useState<number | null>(null);
+
   return (
     <div className="container mx-auto py-8 space-y-8">
       <h1 className="text-2xl md:text-3xl font-bold mb-8 text-white">Jobs</h1>
@@ -45,23 +48,40 @@ const DailyTasks = () => {
               </TableHeader>
               <TableBody>
                 {emptyRows.map((row) => (
-                  <TableRow key={row.id}>
+                  <TableRow 
+                    key={row.id} 
+                    className={`transition-all duration-300 ${
+                      focusedRow === row.id ? "!h-auto" : ""
+                    }`}
+                  >
                     <TableCell className="text-white">
                       <Input 
-                        className="bg-transparent border-gray-600 text-white"
+                        className={`bg-transparent border-gray-600 text-white transition-all duration-300 ${
+                          focusedRow === row.id ? "h-24 md:h-10" : ""
+                        }`}
                         placeholder="Enter job"
+                        onFocus={() => setFocusedRow(row.id)}
+                        onBlur={() => setFocusedRow(null)}
                       />
                     </TableCell>
                     <TableCell className="text-white">
                       <Input 
-                        className="bg-transparent border-gray-600 text-white"
+                        className={`bg-transparent border-gray-600 text-white transition-all duration-300 ${
+                          focusedRow === row.id ? "h-24 md:h-10" : ""
+                        }`}
                         placeholder="Enter zone"
+                        onFocus={() => setFocusedRow(row.id)}
+                        onBlur={() => setFocusedRow(null)}
                       />
                     </TableCell>
                     <TableCell className="text-white">
                       <Textarea 
-                        className="bg-transparent border-gray-600 text-white min-h-[60px]"
+                        className={`bg-transparent border-gray-600 text-white transition-all duration-300 ${
+                          focusedRow === row.id ? "h-24 md:h-10" : "min-h-[60px]"
+                        }`}
                         placeholder="Enter notes"
+                        onFocus={() => setFocusedRow(row.id)}
+                        onBlur={() => setFocusedRow(null)}
                       />
                     </TableCell>
                   </TableRow>
