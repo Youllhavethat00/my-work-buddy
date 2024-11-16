@@ -9,13 +9,13 @@ const Navigation = () => {
   const isActive = (path: string) => location.pathname === path;
   
   return (
-    <nav className="bg-primary text-white p-4 shadow-lg">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="flex items-center space-x-2">
-          <div className="text-xl md:text-2xl font-bold">The Quarry</div>
+    <nav className="bg-primary text-white p-2 md:p-4 shadow-lg">
+      <div className="container mx-auto flex justify-between items-center px-2 md:px-4">
+        <div className="flex items-center">
+          <div className="text-xl md:text-2xl font-bold pl-1 md:pl-0">The Quarry</div>
         </div>
-        <div className="flex items-center space-x-4">
-          <div className="space-x-4 text-sm md:text-base">
+        <div className="flex items-center space-x-2 md:space-x-4">
+          <div className="space-x-2 md:space-x-4 text-sm md:text-base">
             <Link
               to="/work-orders"
               className={`hover:text-accent-blue transition-colors ${
