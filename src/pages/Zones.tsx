@@ -15,19 +15,19 @@ const mockZones: Zone[] = [
     id: 1,
     name: "Zone 1",
     description: "Main entrance, Bridal Suite, Warehouse",
-    imageUrl: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb",
+    imageUrl: "",
   },
   {
     id: 2,
     name: "Zone 2",
     description: "Yard 1 The big island ",
-    imageUrl: "https://images.unsplash.com/photo-1473177104440-ffee2f376098",
+    imageUrl: "",
   },
   {
     id: 3,
     name: "Zone 3",
     description: "Small island, the Terrazzo, and the grass stip in front of the rock",
-    imageUrl: "https://images.unsplash.com/photo-1486718448742-163732cd1544",
+    imageUrl: "",
   },
   {
     id: 4,
