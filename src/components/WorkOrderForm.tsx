@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/components/ui/use-toast";
 
-const zones = ["Zone A", "Zone B", "Zone C", "Zone D"];
+const zones = ["Zone 1", "Zone 2", "Zone 3", "Zone 4", "Zone 5", "Zone 6", "Zone 7"];
 
 const WorkOrderForm = () => {
   const { toast } = useToast();
