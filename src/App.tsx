@@ -10,6 +10,7 @@ import Index from "./pages/Index";
 import WorkOrders from "./pages/WorkOrders";
 import DailyTasks from "./pages/DailyTasks";
 import Zones from "./pages/Zones";
+import Events from "./pages/Events";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const AppContent = () => {
         <Route path="/work-orders" element={<WorkOrders />} />
         <Route path="/daily-tasks" element={<DailyTasks />} />
         <Route path="/zones" element={<Zones />} />
+        <Route path="/events" element={<Events />} />
       </Routes>
     </>
   );

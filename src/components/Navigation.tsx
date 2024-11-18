@@ -48,6 +48,14 @@ const Navigation = () => {
               >
                 Zones
               </Link>
+              <Link
+                to="/events"
+                className={`px-4 py-2 rounded-full transition-all duration-300 hover:bg-white/10 ${
+                  isActive("/events") ? "text-accent-blue bg-white/5" : ""
+                }`}
+              >
+                Events
+              </Link>
             </div>
           </div>
 
@@ -92,6 +100,14 @@ const Navigation = () => {
             }`}
           >
             <span className="text-lg">Zones</span>
+          </Link>
+          <Link
+            to="/events"
+            className={`p-3 rounded-lg hover:bg-white/5 transition-all duration-300 flex items-center space-x-2 ${
+              isActive("/events") ? "bg-white/10 text-accent-blue" : ""
+            }`}
+          >
+            <span className="text-lg">Events</span>
           </Link>
         </div>
       </div>
