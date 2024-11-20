@@ -15,43 +15,43 @@ const mockZones: Zone[] = [
     id: 1,
     name: "Zone 1",
     description: "Main entrance, Bridal Suite, Warehouse",
-    imageUrl: "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=800&q=60",
+    imageUrl: "/images/zone1.jpg",
   },
   {
     id: 2,
     name: "Zone 2",
     description: "Yard 1 The big island ",
-    imageUrl: "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=800&q=60",
+    imageUrl: "/images/zone2.jpg",
   },
   {
     id: 3,
     name: "Zone 3",
     description: "Small island, the Terrazzo, and the grass stip in front of the rock",
-    imageUrl: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=800&q=60",
+    imageUrl: "/images/zone3.jpg",
   },
   {
     id: 4,
     name: "Zone 4",
     description: "The Canyon entrace (both sides), and Canyon",
-    imageUrl: "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=800&q=60",
+    imageUrl: "/images/zone4.jpg",
   },
   {
     id: 5,
     name: "Zone 5",
     description: "The Carrara",
-    imageUrl: "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=800&q=60",
+    imageUrl: "/images/zone5.jpg",
   },
   {
     id: 6,
     name: "Zone 6",
     description: "Parking Lot",
-    imageUrl: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=60",
+    imageUrl: "/images/zone6.jpg",
   },
   {
     id: 7,
     name: "Zone 7",
     description: "Office",
-    imageUrl: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=60",
+    imageUrl: "/images/zone7.jpg",
   }
 ];
 
