@@ -15,43 +15,43 @@ const mockZones: Zone[] = [
     id: 1,
     name: "Zone 1",
     description: "Main entrance, Bridal Suite, Warehouse",
-    imageUrl: "https://firebasestorage.googleapis.com/v0/b/the-quarry-62df9.appspot.com/o/zones%2Fzone1.jpg?alt=media",
+    imageUrl: "/placeholder.svg",
   },
   {
     id: 2,
     name: "Zone 2",
     description: "Yard 1 The big island ",
-    imageUrl: "https://firebasestorage.googleapis.com/v0/b/the-quarry-62df9.appspot.com/o/zones%2Fzone2.jpg?alt=media",
+    imageUrl: "/placeholder.svg",
   },
   {
     id: 3,
     name: "Zone 3",
     description: "Small island, the Terrazzo, and the grass stip in front of the rock",
-    imageUrl: "https://firebasestorage.googleapis.com/v0/b/the-quarry-62df9.appspot.com/o/zones%2Fzone3.jpg?alt=media",
+    imageUrl: "/placeholder.svg",
   },
   {
     id: 4,
     name: "Zone 4",
     description: "The Canyon entrace (both sides), and Canyon",
-    imageUrl: "https://firebasestorage.googleapis.com/v0/b/the-quarry-62df9.appspot.com/o/zones%2Fzone4.jpg?alt=media",
+    imageUrl: "/placeholder.svg",
   },
   {
     id: 5,
     name: "Zone 5",
     description: "The Carrara",
-    imageUrl: "https://firebasestorage.googleapis.com/v0/b/the-quarry-62df9.appspot.com/o/zones%2Fzone5.jpg?alt=media",
+    imageUrl: "/placeholder.svg",
   },
   {
     id: 6,
     name: "Zone 6",
     description: "Parking Lot",
-    imageUrl: "https://firebasestorage.googleapis.com/v0/b/the-quarry-62df9.appspot.com/o/zones%2Fzone6.jpg?alt=media",
+    imageUrl: "/placeholder.svg",
   },
   {
     id: 7,
     name: "Zone 7",
     description: "Office",
-    imageUrl: "https://firebasestorage.googleapis.com/v0/b/the-quarry-62df9.appspot.com/o/zones%2Fzone7.jpg?alt=media",
+    imageUrl: "/placeholder.svg",
   }
 ];
 
