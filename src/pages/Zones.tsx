@@ -15,43 +15,43 @@ const mockZones: Zone[] = [
     id: 1,
     name: "Zone 1",
     description: "Main entrance, Bridal Suite, Warehouse",
-    imageUrl: "https://share.icloud.com/photos/010K5xefuDrPNuVQiFfDB10NA",
+    imageUrl: "/images/zone1.jpg",
   },
   {
     id: 2,
     name: "Zone 2",
     description: "Yard 1 The big island ",
-    imageUrl: "https://share.icloud.com/photos/0f8OsqDZQinINXUwwejVzeUig",
+    imageUrl: "/images/zone2.jpg",
   },
   {
     id: 3,
     name: "Zone 3",
     description: "Small island, the Terrazzo, and the grass stip in front of the rock",
-    imageUrl: "https://share.icloud.com/photos/06421235A6CxJMpIEGtJYB0Tw",
+    imageUrl: "/images/zone3.jpg",
   },
   {
     id: 4,
     name: "Zone 4",
     description: "The Canyon entrace (both sides), and Canyon",
-    imageUrl: "https://share.icloud.com/photos/059ubj0qxBEtND5ytmSlmnQvw",
+    imageUrl: "/images/zone4.jpg",
   },
   {
     id: 5,
     name: "Zone 5",
     description: "The Carrara",
-    imageUrl: "https://share.icloud.com/photos/0f2a6p-4v*HtQERPoxyTfVuLQ",
+    imageUrl: "/images/zone5.jpg",
   },
   {
     id: 6,
     name: "Zone 6",
     description: "Parking Lot",
-    imageUrl: "",
+    imageUrl: "/images/zone6.jpg",
   },
   {
     id: 7,
     name: "Zone 7",
     description: "Office",
-    imageUrl: "",
+    imageUrl: "/images/zone7.jpg",
   }
 ];
 
