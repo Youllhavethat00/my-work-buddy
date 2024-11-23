@@ -14,10 +14,16 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase only if we have the required configuration
-if (!firebaseConfig.apiKey || firebaseConfig.apiKey === 'your_api_key_here') {
-  throw new Error('Invalid Firebase API key. Please check your environment variables.');
-}
+const validateConfig = () => {
+  const requiredFields = ['apiKey', 'authDomain', 'projectId', 'storageBucket', 'messagingSenderId', 'appId'];
+  for (const field of requiredFields) {
+    if (!firebaseConfig[field]) {
+      throw new Error(`Missing required Firebase configuration field: ${field}`);
+    }
+  }
+};
 
+validateConfig();
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 export const auth = getAuth(app);
