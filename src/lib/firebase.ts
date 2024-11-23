@@ -14,11 +14,17 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase only if we have the required configuration
-if (!firebaseConfig.apiKey) {
-  throw new Error('Missing Firebase configuration. Please check your environment variables.');
+if (!firebaseConfig.apiKey || firebaseConfig.apiKey === 'your_api_key_here') {
+  throw new Error('Invalid Firebase API key. Please check your environment variables.');
 }
 
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 export const auth = getAuth(app);
-export const analytics = getAnalytics(app);
+
+// Only initialize analytics if we're in a browser environment
+let analytics;
+if (typeof window !== 'undefined') {
+  analytics = getAnalytics(app);
+}
+export { analytics };
