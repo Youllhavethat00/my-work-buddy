@@ -32,22 +32,13 @@ const firebaseConfig = {
 
 validateConfig(firebaseConfig);
 
-let db;
-let auth;
-let analytics;
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+const auth = getAuth(app);
+let analytics = null;
 
-try {
-  const app = initializeApp(firebaseConfig);
-  db = getFirestore(app);
-  auth = getAuth(app);
-  
-  // Only initialize analytics in browser environment
-  if (typeof window !== 'undefined') {
-    analytics = getAnalytics(app);
-  }
-} catch (error) {
-  console.error('Error initializing Firebase:', error);
-  throw error;
+if (typeof window !== 'undefined') {
+  analytics = getAnalytics(app);
 }
 
 export { db, auth, analytics };
