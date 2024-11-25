@@ -3,6 +3,23 @@ import { getFirestore } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
 import { getAnalytics } from 'firebase/analytics';
 
+const validateConfig = (config: Record<string, string | undefined>) => {
+  const requiredFields = [
+    'apiKey',
+    'authDomain',
+    'projectId',
+    'storageBucket',
+    'messagingSenderId',
+    'appId'
+  ];
+
+  for (const field of requiredFields) {
+    if (!config[field]) {
+      throw new Error(`Missing required Firebase configuration field: ${field}`);
+    }
+  }
+};
+
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
@@ -13,24 +30,15 @@ const firebaseConfig = {
   measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
-// Initialize Firebase only if we have the required configuration
-const validateConfig = () => {
-  const requiredFields = ['apiKey', 'authDomain', 'projectId', 'storageBucket', 'messagingSenderId', 'appId'];
-  for (const field of requiredFields) {
-    if (!firebaseConfig[field]) {
-      throw new Error(`Missing required Firebase configuration field: ${field}`);
-    }
-  }
-};
+validateConfig(firebaseConfig);
 
-validateConfig();
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 export const auth = getAuth(app);
 
-// Only initialize analytics if we're in a browser environment
+// Only initialize analytics if we're in a browser environment and have a measurement ID
 let analytics;
-if (typeof window !== 'undefined') {
+if (typeof window !== 'undefined' && firebaseConfig.measurementId) {
   analytics = getAnalytics(app);
 }
 export { analytics };
