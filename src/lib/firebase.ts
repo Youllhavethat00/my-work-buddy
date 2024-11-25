@@ -10,13 +10,13 @@ const validateConfig = (config: Record<string, string | undefined>) => {
     'projectId',
     'storageBucket',
     'messagingSenderId',
-    'appId'
+    'appId',
+    'measurementId'
   ];
 
-  for (const field of requiredFields) {
-    if (!config[field]) {
-      throw new Error(`Missing required Firebase configuration field: ${field}`);
-    }
+  const missingFields = requiredFields.filter(field => !config[field]);
+  if (missingFields.length > 0) {
+    throw new Error(`Missing required Firebase configuration fields: ${missingFields.join(', ')}`);
   }
 };
 
@@ -32,13 +32,18 @@ const firebaseConfig = {
 
 validateConfig(firebaseConfig);
 
-const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app);
-export const auth = getAuth(app);
-
-// Only initialize analytics if we're in a browser environment and have a measurement ID
-let analytics;
-if (typeof window !== 'undefined' && firebaseConfig.measurementId) {
-  analytics = getAnalytics(app);
+try {
+  const app = initializeApp(firebaseConfig);
+  export const db = getFirestore(app);
+  export const auth = getAuth(app);
+  
+  // Only initialize analytics in browser environment
+  let analytics;
+  if (typeof window !== 'undefined') {
+    analytics = getAnalytics(app);
+  }
+  export { analytics };
+} catch (error) {
+  console.error('Error initializing Firebase:', error);
+  throw error;
 }
-export { analytics };
