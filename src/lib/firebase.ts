@@ -14,9 +14,13 @@ const validateConfig = (config: Record<string, string | undefined>) => {
     'measurementId'
   ];
 
-  const missingFields = requiredFields.filter(field => !config[field]);
+  const missingFields = requiredFields.filter(field => {
+    const value = config[field.toLowerCase()];
+    return !value || value === 'undefined' || value === '';
+  });
+
   if (missingFields.length > 0) {
-    throw new Error(`Missing required Firebase configuration fields: ${missingFields.join(', ')}`);
+    throw new Error(`Missing or invalid Firebase configuration fields: ${missingFields.join(', ')}`);
   }
 };
 
