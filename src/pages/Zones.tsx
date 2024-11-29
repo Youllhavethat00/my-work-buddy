@@ -2,6 +2,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 interface Zone {
   id: number;
@@ -33,13 +34,13 @@ const mockZones: Zone[] = [
     id: 4,
     name: "Zone 4",
     description: "The Canyon entrace (both sides), and Canyon",
-    imageUrl: "/images/zone4.jpg",
+    imageUrl: "/images/zone4.JPG", // Note the uppercase JPG extension
   },
   {
     id: 5,
     name: "Zone 5",
     description: "The Carrara",
-    imageUrl: "/images/zone5.jpg",
+    imageUrl: "/images/zone5.JPG", // Note the uppercase JPG extension
   },
   {
     id: 6,
@@ -57,6 +58,14 @@ const mockZones: Zone[] = [
 
 const Zones = () => {
   const navigate = useNavigate();
+  const [imageErrors, setImageErrors] = useState<Record<number, boolean>>({});
+
+  const handleImageError = (zoneId: number) => {
+    setImageErrors(prev => ({
+      ...prev,
+      [zoneId]: true
+    }));
+  };
 
   return (
     <div className="container mx-auto py-8 space-y-8">
@@ -79,10 +88,20 @@ const Zones = () => {
                 <CardTitle className="text-lg md:text-xl text-white">{zone.name}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div 
-                  className="w-full h-48 rounded-md bg-cover bg-center"
-                  style={{ backgroundImage: `url(${zone.imageUrl})` }}
-                />
+                {!imageErrors[zone.id] ? (
+                  <div 
+                    className="w-full h-48 rounded-md bg-cover bg-center"
+                    style={{ 
+                      backgroundImage: `url(${zone.imageUrl})`,
+                      backgroundColor: '#1a1a1a' 
+                    }}
+                    onError={() => handleImageError(zone.id)}
+                  />
+                ) : (
+                  <div className="w-full h-48 rounded-md bg-gray-800 flex items-center justify-center text-gray-400">
+                    Image not available
+                  </div>
+                )}
                 <p className="text-sm md:text-base text-accent-gray">
                   {zone.description}
                 </p>
